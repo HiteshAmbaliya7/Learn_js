@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manuplactin</title>
+    <style>
+        .red-color{
+            color: red;
+        }
+        .underline{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="block">
+        <p class="pragraph"> welcome to my website </p>
+    </nav>
+    <div class="block">
+        <h4>hay there, my name is <span class="underline" id="username">hitesh ambaliya</span></h4>
+        <p class="pragraph">there tissome code</p>
+        <pre><code>console.log("hay there")</code></pre>
+        <h4>
+        <div>
+            <div id="ab">
+                this is div 
+            </div>
+        </div>
+    </h4>
+    </div>
+    <script>
+        const el=document.getElementById('username');
+        console.log(el);
+        el.setAttribute("Area","123");// add atributes with help of javascript
+        el.innerText='MR. AMBALIYA';
+        el.classList.add("red-color");// You also add classes in elements 
+        console.log(el.classList);
+        //youcan even remove entire line
+        el.remove();//this will delet el element form code
+        el.classList.remove('underline');
+        const abc=document.getElementById('ab');
+        abc.style.textDecoration='underline';// this way you can add inline style in elements
+        abc.style.color='tomato';
+        abc.parentElement.style.backgroundColor="gray";//you can add style to perent elements
+    </script>
+    
+</body>
+</html>
