@@ -7,6 +7,7 @@ async function getdata(cityname){
     const promise = await fetch(`http://api.weatherapi.com/v1/current.json?{inthis place give :weatherapi } &q=${cityname}&aqi=yes`);
     return await promise.json()
 }
+
 button.addEventListener('click',async()=>{
     const value=input.value;
     const result=await getdata(value);
